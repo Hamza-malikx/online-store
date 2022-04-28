@@ -512,7 +512,7 @@ function run(e) {
       });
   })();
 }
-(function () {
+function againRunning() {
   fetch("https://api.npoint.io/4bd83a531f355b7102e5")
     .then((response) => response.json())
     .then((data) => {
@@ -773,8 +773,9 @@ function run(e) {
         myFunction(cartProducts);
       });
     });
-})();
-function myFunction(cartProducts) {
+}
+againRunning();
+function myFunction() {
   if (document.getElementById("checkout").innerHTML > 0) {
     document.getElementById("checkout").style.display = "block";
   } else {

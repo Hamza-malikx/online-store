@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --accent: #00b8ff;
+  --dark-grey: #282a2b;
+  --light-grey: #8d98a1;
+  --color4: rgb(128, 14, 137);
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  font-weight: regular;
+  color: var(--light-grey);
+  /* background: #f0f1f2; */
+}
+svg {
+  height: 23rem;
+  margin-right: 4rem;
+}
+
+#envelope {
+  animation: float 2s ease-in-out infinite;
+}
+#star1,
+#star2,
+#star3,
+#star4,
+#star5,
+#star6 {
+  animation: blink 1s ease-in-out infinite;
+}
+#star2 {
+  animation-delay: 100ms;
+}
+#star3 {
+  animation-delay: 500ms;
+}
+#star4 {
+  animation-delay: 700ms;
+}
+#star5 {
+  animation-delay: 300ms;
+}
+#star6 {
+  animation-delay: 200ms;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* .container {
+  height: 110vh;
+} */
+.wrapper {
+  margin-top: 20px;
+}
+form {
+  min-width: 25rem;
+}
+
+/* .btn.btn-primary {
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  padding: 0 3rem;
+  border: 0;
+  border-radius: 3rem;
+  background-image: linear-gradient(131deg, #ffd340, #ff923c, #ff923c, #ff923c);
+  background-size: 300% 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn.btn-primary:hover:enabled {
+  box-shadow: 0 0.5em 0.5em -0.4em #ff923cba;
+  background-size: 100% 100%;
+  transform: translateY(-0.15em);
+} */
+.btn.btn-primary {
+  text-align: center;
+  max-width: 100px;
+  display: inline;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.725rem;
+  padding: 0.785em 2em;
+  border: 1px solid var(--light-grey);
+  border-radius: 100px;
+  width: 100%;
+  color: #999;
+  margin-right: 12px;
+  background: transparent;
+  max-width: 145px;
+  margin-bottom: 20px;
+}
+.btn.btn-primary:hover:enabled {
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid gray;
+  font-family: "Montserrat", sans-serif;
+}
+.footer h3 {
+  font-size: 22px;
+  margin: 22px 0;
+  color: #000;
+}
+.footer p {
+  font-size: 19px;
+  margin: 20px 0;
+}
+.socials {
+  list-style: none;
+  display: flex;
+  padding-left: 0px;
+  margin-bottom: 0px;
+}
+.socials li a {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: block;
+  text-align: center;
+  margin: 0 10px;
+  border-radius: 50%;
+  padding: 6px;
+  box-sizing: border-box;
+  text-decoration: none;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(0deg, #ddd, #fff);
+  transition: 0.5s;
+}
+.socials li a:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+.socials li a i {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(0deg, #fff, #ddd);
+  border-radius: 50%;
+  line-height: calc(120px - 12px);
+  font-size: 20px;
+  color: #262626;
+  transition: 0.5s;
+}
+
+.socials li:nth-child(1) a:hover i {
+  color: #55acee;
+}
+
+.socials li:nth-child(2) a:hover i {
+  color: #0077b5;
+  color: #e4405f;
+}
+@media screen and (max-width: 1440px) {
+}
+@media screen and (max-width: 1050px) {
+  .wrapper {
+    flex-direction: column;
+  }
+  svg {
+    margin-bottom: 40px;
+    margin-right: 0px;
+  }
+  .tut {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .wrapper {
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .container {
+    height: auto;
+  }
+  svg {
+    display: none;
+  }
+}
+@media screen and (max-width: 400px) {
+  form {
+    min-width: 100%;
+  }
+}

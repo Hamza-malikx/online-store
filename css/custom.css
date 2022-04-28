@@ -141,7 +141,7 @@ header .header-icons a {
 .topProd {
   text-align: center;
   color: #ff465d;
-  width: 450px;
+  max-width: 450px;
   margin: 50px auto 0;
   border-top: 1px solid #08546c;
   border-bottom: 1px solid #08546c;
@@ -193,9 +193,64 @@ header .header-icons a {
 /* Cart */
 
 .cartWrapper {
-  margin: 50px 0;
+  margin: 30px 0 50px;
 }
-
+.cartHeader {
+  border-bottom: 3px solid #ff465d;
+  padding: 0 0 25px;
+}
+.cartHeader span {
+  background: #dc3545;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 8px 15px 14px;
+  position: relative;
+}
+.checkout {
+  background: #055160 !important;
+  width: auto;
+  margin-right: 13px;
+}
+.checkout a {
+  color: #fff;
+  text-decoration: none;
+}
+.emptyDisable {
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 40px;
+  margin-top: 25px;
+  display: none;
+}
+.emptyEnable {
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 40px;
+  margin-top: 25px;
+  display: flex;
+}
+.cartProductWrapper {
+  background-color: #e5e9ea;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0px 30px;
+  padding: 10px 20px;
+  /* box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px; */
+}
+.ovs {
+  max-height: 400px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.innerWrapperProducts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 /* Cart Ended */
 
 /* Footer */
@@ -261,9 +316,47 @@ footer .social-icons li :hover {
   background-color: #ffe165;
   color: #1f3646;
 }
+@media screen and (max-width: 767px) {
+  .cartProductWrapper {
+    flex-wrap: wrap;
+  }
+  .innerWrapperProducts {
+    flex-wrap: wrap;
+  }
+  .innerWrapperProducts img {
+    margin: 0px !important;
+    width: 30% !important;
+  }
+  .innerWrapperProducts p {
+    float: right !important;
+    margin: 1rem 0rem 1rem 1rem !important;
+    width: 65% !important;
+    text-align: right !important;
+  }
+}
 @media screen and (max-width: 575px) {
   .navbar-nav li #active {
     background: #1f3646;
     color: white;
+    border-bottom: 2px solid #1f3646;
+  }
+}
+@media screen and (max-width: 410px) {
+  .cartProductWrapper {
+    flex-wrap: wrap;
+  }
+  .innerWrapperProducts {
+    flex-wrap: wrap;
+  }
+  .innerWrapperProducts img {
+    margin: 0px !important;
+    width: 30% !important;
+  }
+  .innerWrapperProducts p {
+    font-size: 25px !important;
+    float: right !important;
+    margin: 1rem 0rem 1rem 1rem !important;
+    width: 60% !important;
+    text-align: right !important;
   }
 }

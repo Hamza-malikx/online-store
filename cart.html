@@ -72,20 +72,10 @@
               <a class="nav-link"
                  href="products.html">Products</a>
             </li>
-            <!-- <li>
-              <a class="nav-link"
-                 href="about.html">About Us</a>
-            </li> -->
             <li>
               <a class="nav-link"
-                 href="#">Contact</a>
+                 href="contact.html">Contact</a>
             </li>
-            <!-- <li>
-              <button type="button"
-                      class="btn btn-primary"
-                      id="loginlogout"
-                      href="#">Login</button>
-            </li> -->
           </ul>
         </div>
         </ul>
@@ -97,17 +87,19 @@
   </header>
     <div class="container">
         <main class="cartWrapper">
-          <h1 class="w-50 mx-auto text-center">Your Cart</h1>
+          <h1 class="cartHeader"><span>Your Cart</span></h1>
           <div id="root"></div>
-
+          <h3 class="emptyDisable" id="emptyCart">
+            Oops! Your cart is Empty 😕
+          </h3>
           <div class="row">
             <button
               id="checkoutButton"
               type="button"
-              class="btn btn-dark w-25 align-center col-6 mx-auto"
+              class="btn btn-dark align-center ms-auto checkout"
             >
-              <a class="nav-item nav-link" href="checkout.html"
-                >Proceed to Checkout</a
+              <a href="contact.html"
+                >Checkout</a
               >
             </button>
           </div>
